@@ -15,16 +15,14 @@ import os
 api = FastAPI()
 
 # # name of the model artifact
-# artifact_model_name = "risk_credit/model_export:latest"
+artifact_model_name = "diabetes/model_export:latest"
 
 # # initiate the wandb project
-# run = wandb.init(project="risk_credit",job_type="api")
-
-# # create the api
-# app = FastAPI()
+run = wandb.init(project="diabetes",job_type="api")
 
 
-model_path = ("final_model.pkl")
+
+# model_path = ("final_model.pkl")
 
 api.add_middleware(
     CORSMiddleware,
@@ -99,7 +97,7 @@ async def get_prediction(patient: Patient):
 
     ## Dowload the model:
    
-    # model_path = run.use_artifact(artifact_model_name).file()
+    model_path = run.use_artifact(artifact_model_name).file()
     pipe = joblib.load(model_path)
 
     # Change input into a data frame
