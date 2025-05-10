@@ -22,9 +22,9 @@ option15 = st.select_slider("Now thinking about your mental health, which includ
 option16 = st.select_slider("Now thinking about your physical health, which includes physical illness and injury, for how many days during the past 30 days was your physical health not good?", options = range(0,31,1))
 option17 = st.selectbox("Do you have serious difficulty walking or climbing stairs?", ("Yes", "No"))
 option18 = st.selectbox("What is your gender?",("Male", "Female"))
-option19 = st.selectbox("What age range are you in?\n\n1-(18-24), 2-(25-29), 3-(30-34), 4-(35-39), 5-(40-44), 6-(45-49), 7-(50-54), 8-(55-59), 9-(60-64), 10-(65-69), 11-(70-74), 12(75-79), 13-(80 or more)", range(1,14,1))
-option20 = st.selectbox("Your Education level?\n\n1 = Never attended school or only kindergarten 2 = Grades 1 through 8 (Elementary) 3 = Grades 9 through 11 (Some high school) 4 = Grade 12 or GED (High school graduate) 5 = College 1 year to 3 years (Some college or technical school) 6 = College 4 years or more", range(1,7,1))
-option21 = st.selectbox("Your Income level?\n\n1 = <$10000, 2 = <$15000, 3 = <$20000, 4 = <$25000, 5 = <$35000, 6 = <$50000, 7 = <$75000, 8 = >$75000", range(1,9,1))
+option19 = st.selectbox("What age range are you in?\n\n1-(18-24),   2-(25-29)\n\n 3-(30-34),   4-(35-39)\n\n 5-(40-44),   6-(45-49)\n\n 7-(50-54),   8-(55-59)\n\n 9-(60-64),   10-(65-69)\n\n 11-(70-74),   12(75-79)\n\n 13-(80 or more)", range(1,14,1))
+option20 = st.selectbox("Your Education level?\n\n1 = Never attended school or only kindergarten\n \n 2 = Grades 1 through 8 (Elementary)\n \n 3 = Grades 9 through 11 (Some high school)\n \n 4 = Grade 12 or GED (High school graduate)\n \n 5 = College 1 year to 3 years (Some college or technical school)\n \n 6 = College 4 years or more", range(1,7,1))
+option21 = st.selectbox("Your Income level (in a year)?\n\n1 = <\$10000, 2 = <\$15000, 3 = <\$20000, 4 = <\$25000, 5 = <\$35000, 6 = <\$50000, 7 = <\$75000, 8 = >\$75000", range(1,9,1))
 
 
 if st.button("Submit"):
@@ -83,7 +83,7 @@ if st.button("Submit"):
                 }
 
 
-                response = requests.post("http://localhost:8000/predict",json = data)
+                response = requests.post("https://fast-api-deploy-nyav.onrender.com/predict",json = data)
 
 
                 if response.status_code == 200:
