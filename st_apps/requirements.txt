@@ -53,6 +53,7 @@ PyDispatcher==2.0.7
 pyOpenSSL==24.2.1
 python-dateutil==2.9.0.post0
 pytz==2025.2
+pytest==8.3.5
 queuelib==1.7.0
 referencing==0.36.2
 requests==2.32.3
