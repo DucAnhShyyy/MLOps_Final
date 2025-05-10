@@ -66,6 +66,7 @@ cd <your-repo-directory>
 
 # Install dependencies
 pip install -r requirements.txt
+```
 
 ### ▶️ Run the Application
 ```bash
@@ -74,6 +75,7 @@ streamlit run st_apps/frontend.py
 
 # Launch the backend app
 uvicorn st_apps.backend:api --reload
+```
 
 ### 🌐 Access the Web App
 👉 https://diabetes-predicted-app.streamlit.app/
