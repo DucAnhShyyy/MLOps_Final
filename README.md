@@ -74,7 +74,7 @@ pip install -r requirements.txt
 ### ▶️ Run the Application
 ```bash
 # Launch the frontend app
-streamlit run st_apps/frontend.py
+streamlit run st_apps\frontend.py
 
 # Launch the backend app
 uvicorn st_apps.backend:api --reload
