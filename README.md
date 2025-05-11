@@ -55,6 +55,9 @@ While the tool offers fast and accessible predictions, it is subject to limitati
 
 ---
 
+## Workflow
+![Alt text](https://github.com/DucAnhShyyy/MLOps_Final/blob/main/image/495268199_2078701029306364_4930236719996270136_n.png)
+
 ## 🚀 How to Use This Project
 
 ### 🧰 Setup & Installation
